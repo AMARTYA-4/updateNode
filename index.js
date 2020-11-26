@@ -16,10 +16,9 @@ require("./Schema/Classification");
 require("./Schema/Model");
 require("./Schema/Color");
 require("./Schema/issue");
-//DeviceRepair
-const mongoURI="mongodb+srv://amartyasarkar0001:amartyasarkar1@cluster0.fp2ed.mongodb.net/updateCheck?retryWrites=true&w=majority"
 
-// const mongoURI="mongodb+srv://amartyasarkar0001:amartyasarkar1@cluster0.fp2ed.mongodb.net/DeviceRepair?retryWrites=true&w=majority"
+const mongoURI="YOUR SPECIAL SETUP URL OG MONGO DB ATLAS"
+
 
 mongoose.connect(mongoURI,{
     useNewUrlParser:true,
@@ -33,10 +32,6 @@ mongoose.connection.on("error",(err)=>{
     console.log("Error",err)
 })
 
-
-//amartyasarkar0001
-//amartyasarkar1
-//mongodb+srv://amartyasarkar0001:<password>@cluster0.fp2ed.mongodb.net/<dbname>?retryWrites=true&w=majority
 app.use(express.json());
 app.use(require("./routes/handling"));
 
